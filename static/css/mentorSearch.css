@@ -1,0 +1,171 @@
+body {
+    font-family: 'Tajawal', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+    background-color: #f4f4f4;
+    position: relative;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #395B64;
+    color: #ecf0f1;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+main {
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin: 0 auto;
+    width: 50%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="submit"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.logo {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    height: 75px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #395B64;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Tajawal', Arial, sans-serif;
+}
+
+footer {
+    background-color: #395B64;
+    color: #ecf0f1;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+footer .social-icons a {
+    color: #ecf0f1;
+    margin: 0 5px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #3498db;
+}
+
+.smf {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    padding: 0.5rem;
+    border: 2px solid #005f73;
+    border-radius: 8px;
+    background-color: #e0f7fa;
+    color: #005f73;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+    font-family: 'Tajawal', Arial, sans-serif;
+}
+
+.smf:focus {
+    border-color: #007ea7;
+    box-shadow: 0 0 5px #007ea7;
+}
+
+.hidden {
+    display: none;
+}
+
+.field-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.toggle-all {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #005f73;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Tajawal', Arial, sans-serif;
+}
+
+.toggle-all:hover {
+    background-color: #007ea7;
+}

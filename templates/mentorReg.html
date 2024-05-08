@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sanad - منصة الإرشاد</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/mentorReg.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head> 
+<body>
+    <header>
+        <h1>منصة سند</h1>
+        <nav>
+            <ul>
+                <li><a href="profile">الحساب</a></li>
+                <li><a href="mentorreg">كن سند</a></li>
+                <li><a href="mentorsearch">تبي سند؟</a></li>
+                <li><a href="ratings">التقييم</a></li>
+                <li><a href="signout">الخروج</a></li>
+            </ul>
+        </nav>
+        <img src="{{ url_for('static', filename='222.png') }}" alt="Sanad Logo" class="logo"> <!-- Adjust src as needed -->
+
+    </header>
+
+    <main>
+        <section>
+            {% if profile %}
+            <h2>بيانات ملف المرشد</h2>
+            <p><strong>التخصص:</strong> {{ dictOfDicts["major"][profile[1]] }}</p>
+            <p><strong>المرحلة:</strong> {{ dictOfDicts["standing"][profile[2]] }}</p>
+            <p><strong>التاريخ الأكاديمي:</strong> {{ dictOfDicts["history"][profile[3]] }}</p>
+            <p><strong>المدينة:</strong> {{ dictOfDicts["city"][profile[4]] }}</p>
+            <p><strong>الإسكان:</strong> {{ dictOfDicts["housing"][profile[5]] }}</p>
+            <p><strong>حالة الظهور:</strong> {{ dictOfDicts["appearance"][profile[6]] }}</p>
+            {% else %}
+            <p>لا يوجد لديك ملف مرشد.</p>
+            {% endif %}
+        </section>
+        {% if profile %}
+        <section>
+            <h2>تحديث حالة الظهور</h2>
+            <form method="post">
+                {{ form2.hidden_tag() }}
+                <label for="appearance">حالة الظهور:</label>
+                {{ form2.appearance(id="appearance") }}
+                {{ form2.confirm(id="confirm", class="btn") }}
+            </form>
+        </section>
+        {% endif %}
+        <section>
+            {% if profile %}
+            <h2>تحديث البيانات</h2>
+            {% else %}
+            <h2>تسجيل جديد</h2>
+            {% endif %}
+            <form method="post">
+                {{ form.hidden_tag() }}
+                <label for="major">التخصص:</label>
+                {{ form.major(id="major") }}
+                <label for="standing">المستوى:</label>
+                {{ form.standing(id="standing") }}
+                <label for="history">الأداء الأكاديمي:</label>
+                {{ form.history(id="history") }}
+                <label for="city">المدينة:</label>
+                {{ form.city(id="city") }}
+                <label for="housing">نوع السكن:</label>
+                {{ form.housing(id="housing") }}
+                {{ form.register(id="register", class="btn") }}
+            </form>
+        </section>
+    </main>
+    <script>
+        window.onload = function() {
+            var selectField = document.getElementById('major');
+            var defaultValue = '{{profile[1]}}';
+            if (selectField) {
+                selectField.value = defaultValue;
+            }
+            selectField = document.getElementById('standing');
+            defaultValue = '{{profile[2]}}';
+            if (selectField) {
+                selectField.value = defaultValue;
+            }
+            selectField = document.getElementById('history');
+            defaultValue = '{{profile[3]}}';
+            if (selectField) {
+                selectField.value = defaultValue;
+            }
+            selectField = document.getElementById('city');
+            defaultValue = '{{profile[4]}}';
+            if (selectField) {
+                selectField.value = defaultValue;
+            }
+            selectField = document.getElementById('housing');
+            defaultValue = '{{profile[5]}}';
+            if (selectField) {
+                selectField.value = defaultValue;
+            }
+            selectField = document.getElementById('appearance');
+            defaultValue = '{{profile[6]}}';
+            if (selectField) {
+                selectField.value = defaultValue;
+            }
+        };
+    </script>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p>حقوق الطبع محفوظة &copy; 2024 منصة سند</p>
+    </footer>
+</body>
+</html>

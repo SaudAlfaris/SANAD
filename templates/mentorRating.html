@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sanad - منصة الإرشاد</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/mentorRating.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>   
+<body>
+    <header>
+        <h1>منصة سند</h1>
+        <nav>
+            <ul>
+                <li><a href="/user/{{ email }}/profile">الحساب</a></li>
+                <li><a href="/user/{{ email }}/mentorreg">كن سند</a></li>
+                <li><a href="/user/{{ email }}/mentorsearch">تبي سند؟</a></li>
+                <li><a href="/user/{{ email }}/ratings">التقييم</a></li>
+                <li><a href="/user/{{ email }}/signout">الخروج</a></li>
+            </ul>
+        </nav>
+        <img src="{{ url_for('static', filename='222.png') }}" alt="Sanad Logo" class="logo"> <!-- Adjust src as needed -->
+
+    </header>
+
+    <main>
+        <section>
+            <h2>المرشد تحت التقييم</h2>
+            <p><strong>الإسم:</strong> {{ r[0][7] }}</p>
+            <p><strong>التخصص:</strong> {{ dictOfDicts["major"][r[0][1]] }}</p>
+            <p><strong>المرحلة:</strong> {{ dictOfDicts["standing"][r[0][2]] }}</p>
+            <p><strong>التاريخ الأكاديمي:</strong> {{ dictOfDicts["history"][r[0][3]] }}</p>
+            <p><strong>المدينة:</strong> {{ dictOfDicts["city"][r[0][4]] }}</p>
+            <p><strong>الإسكان:</strong> {{ dictOfDicts["housing"][r[0][5]] }}</p>
+</section>
+        <section>
+            <h2>تقييم المرشد</h2>
+            <form method="post">
+                {{ form.hidden_tag() }}
+                <label for="rating">التقييم:</label>
+                {{ form.rating(id="rating", class=".toogle-all") }}
+                {{ form.rate(id="rate", class="btn") }}
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p>حقوق الطبع محفوظة &copy; 2024 منصة سند</p>
+    </footer>
+</body>
+</html>

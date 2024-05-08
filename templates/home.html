@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sanad - منصة الإرشاد</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>    
+<body>
+    <header>
+        <h1>منصة سند</h1>
+        <nav>
+            <ul>
+                <li><a href="home">الرئيسية</a></li>
+                <li><a href="signup">تسجيل حساب</a></li>
+                <li><a href="signin">تسجيل دخول</a></li>
+            </ul>
+        </nav>
+        <img src="{{ url_for('static', filename='222.png') }}" alt="Sanad Logo" class="logo"> <!-- Adjust src as needed -->
+    </header>
+    
+
+    <div class="hero">
+        <h2>مرحبًا بكم في منصة سند</h2>
+        <p>تقديم خدمة فريدة للطلاب، حيث تُعنى المنصة بربط الطلاب الذين يواجهون تحديات مع مجموعة من المرشدين المتميزين الذين نجحوا في تخطي هذه التحديات بنجاح في الماضي.</p>
+        <a href="signup" class="btn colorg">انضم إلينا</a>
+    </div>
+
+
+    <main>
+        <section class="feature-cards">
+            <div class="feature-card">
+                <h3>إرشاد مخصص</h3>
+                <p>توفير إرشاد فردي للطلاب لتلبية احتياجاتهم الخاصة.</p>
+            </div>
+                
+            <div class="feature-card">
+                <h3>مجتمع داعم</h3>
+                <p>الانضمام إلى مجتمع من الطلاب والمعلمين الداعمين لبعضهم البعض.</p>
+            </div>
+        </section>
+        
+
+        <section class="testimonials">
+            <h2>آراء المستخدمين</h2>
+        
+            <div class="testimonial">
+                <p>"لقد ساعدتني منصة سند بشكل كبير في تحقيق أهدافي الأكاديمية."</p>
+                <span>- طالب</span>
+            </div>
+        
+            <div class="testimonial">
+                <p>"بفضل الإرشاد المتخصص، تمكنت من تجاوز تحديات الدراسة بنجاح."</p>
+                <span>- خريج</span>
+            </div>
+        
+            <div class="testimonial">
+                <p>"بفضل نصائح مرشدي، استطعت تحقيق أفضل النتائج في امتحاناتي."</p>
+                <span>- طالبة</span>
+            </div>
+        
+            <div class="testimonial">
+                <p>"الدعم المستمر من منصة سند ساعدني في التركيز والنجاح في دراستي."</p>
+                <span>- خريج</span>
+            </div>
+        
+
+        
+
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p>حقوق الطبع محفوظة &copy; 2024 منصة سند</p>
+    </footer>
+</body>
+</html>
