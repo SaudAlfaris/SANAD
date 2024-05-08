@@ -6,7 +6,7 @@ Welcome to SANAD's readme.txt file, where you will be guided to install SANAD on
 
 If you are looking to view the application deployed and your not feeling like doing all these downloads, feel free to give a visit to:
 
-saudalfaris01.pythonanywhere.com 
+https://saudalfaris01.pythonanywhere.com/
 
 Best,
 
